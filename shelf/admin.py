@@ -12,8 +12,8 @@ class AuthorAdmin(admin.ModelAdmin):
 class BookAdmin(admin.ModelAdmin):
 
     search_fields = ['title']
-    fields = ['title', 'author', 'isbn', 'publisher']
-    list_display = ['title', 'author', 'isbn', 'publisher']
+    fields = ['title', 'authors']
+    list_display = ['title']
 
 
 # Register your models here.
