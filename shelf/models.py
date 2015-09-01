@@ -8,7 +8,8 @@ class Author(models.Model):
     last_name = models.CharField(verbose_name=_('last_name'), max_length=50)
 
     def __str__(self):
-        return self.first_name + ' ' + self.last_name
+        return _('{first_name} {last_name}').format(first_name = self.first_name, last_name = self.last_name)
+        #return _(self.first_name +' '+self.last_name)
 
     class Meta:
         ordering = ('last_name', 'first_name')
